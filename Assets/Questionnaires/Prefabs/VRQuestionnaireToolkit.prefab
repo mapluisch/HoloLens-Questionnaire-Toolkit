@@ -323,7 +323,7 @@ MonoBehaviour:
   Delimiter: ;
   Filetype: 0
   SaveToLocal: 1
-  StorePath: QuestionnaireResponses
+  StorePath: /QuestionnaireResponses/
   UseGlobalPath: 0
   SaveToServer: 0
   TargetURI: http://localhost/test-vr-questionnaire/survey-results.php
