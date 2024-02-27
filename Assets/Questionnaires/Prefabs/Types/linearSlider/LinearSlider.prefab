@@ -280,7 +280,6 @@ GameObject:
   - component: {fileID: 5676474860794611764}
   - component: {fileID: 8251988239156417236}
   - component: {fileID: 5194954381470217255}
-  - component: {fileID: 2747676087830414}
   m_Layer: 5
   m_Name: Slider
   m_TagString: FeedbackElement
@@ -401,18 +400,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2747676087830414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5676474860794611762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29ad5df255829514c90128aed693f12b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5676474860799302510
 GameObject:
   m_ObjectHideFlags: 0
