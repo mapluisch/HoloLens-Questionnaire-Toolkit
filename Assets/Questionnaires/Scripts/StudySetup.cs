@@ -42,15 +42,30 @@ namespace VRQuestionnaireToolkit
 
         private string _path; // file path to write the remembered transform values to
 
+        private Vector3 cachedLocalPosition;
+        private Quaternion cachedLocalRotation;
+        private Vector3 cachedLocalScale;
+
+        void CacheTransformProperties()
+        {
+            cachedLocalPosition = transform.localPosition;
+            cachedLocalRotation = transform.localRotation;
+            cachedLocalScale = transform.localScale;
+        }
+
         void Start()
         {
             _path = Application.dataPath + "/Resources/saved_transform_values";
 
+            CacheTransformProperties();
+            
             if (ConfigurationMode & File.Exists(_path))
                 SetTransformToSavedValues();
             else
                 SetTransformToDefault();
         }
+
+       
 
         void Update()
         {
@@ -146,9 +161,9 @@ namespace VRQuestionnaireToolkit
         /// </summary>
         void SetTransformToDefault()
         {
-            this.transform.localPosition = new Vector3(0.0f, 1.0f, 6.0f);
-            this.transform.localRotation = Quaternion.identity;
-            this.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+            transform.localPosition = cachedLocalPosition;
+            transform.localRotation = cachedLocalRotation;
+            transform.localScale = cachedLocalScale;
         }
     }
 }

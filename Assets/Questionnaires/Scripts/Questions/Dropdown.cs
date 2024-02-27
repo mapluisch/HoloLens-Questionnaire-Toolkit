@@ -73,8 +73,9 @@ namespace VRQuestionnaireToolkit
             dropbDownRec.SetParent(_questionRecTest);
             dropbDownRec.localPosition = new Vector3(0, 80 - (numQuestions * 90), 0);
             // dropbDownRec.localRotation = Quaternion.identity;
-            dropbDownRec.localScale = new Vector3(dropbDownRec.localScale.x * 0.01f, dropbDownRec.localScale.y * 0.01f, dropbDownRec.localScale.z * 0.01f);
-
+            // dropbDownRec.localScale = new Vector3(dropbDownRec.localScale.x * 0.01f, dropbDownRec.localScale.y * 0.01f, dropbDownRec.localScale.z * 0.01f);
+            dropbDownRec.localScale = Vector3.one;
+            
             DropdownList.Add(temp);
         }
     }

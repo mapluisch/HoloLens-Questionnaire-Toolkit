@@ -33,8 +33,8 @@ RectTransform:
   m_GameObject: {fileID: 8697000387260259617}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8697000388396706260}
   m_Father: {fileID: 0}
@@ -58,18 +58,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ParticipantId: id1
   Condition: A
-  ControllerTactileFeedbackOnOff: 1
   SoundOnOff: 0
   ConfigurationMode: 0
   AlsoConsolidateResults: 1
-  VibratingDurationForHovering: 0.05
-  VibratingFrequencyForHovering: 1
-  VibratingAmplitudeForHovering: 5
   SoundClipForHovering: {fileID: 8300000, guid: d7d08c266925c5446947a004fde53aa0, type: 3}
   HoveringVolume: 1
-  VibratingDurationForSelecting: 0.05
-  VibratingFrequencyForSelecting: 200
-  VibratingAmplitudeForSelecting: 1
   SoundClipForSelecting: {fileID: 8300000, guid: 7b660b21fad7af34e806c3f3c4eb8868, type: 3}
   SelectingVolume: 1
 --- !u!114 &8697000387260259645
@@ -330,7 +323,7 @@ MonoBehaviour:
   Delimiter: ;
   Filetype: 0
   SaveToLocal: 1
-  StorePath: /Questionnaires/Data/Answers/
+  StorePath: QuestionnaireResponses
   UseGlobalPath: 0
   SaveToServer: 0
   TargetURI: http://localhost/test-vr-questionnaire/survey-results.php

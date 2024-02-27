@@ -107,9 +107,9 @@ namespace VRQuestionnaireToolkit
             radioRec.SetParent(_questionRecTest);
             radioRec.localPosition = new Vector3(-120 + (numOptions * 20), 90 - (numQuestions * 95), 0);
             radioRec.localRotation = Quaternion.identity;
-            radioRec.localScale = new Vector3(radioRec.localScale.x * 0.01f, radioRec.localScale.y * 0.01f, radioRec.localScale.z * 0.01f);
-
-
+            //radioRec.localScale = new Vector3(radioRec.localScale.x * 0.01f, radioRec.localScale.y * 0.01f, radioRec.localScale.z * 0.01f);
+            radioRec.localScale = Vector3.one;
+            
             if (numOptions == 0)
             {
                 temp.GetComponentInChildren<Toggle>().GetComponentsInChildren<TextMeshProUGUI>()[0].text =

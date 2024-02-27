@@ -94,8 +94,8 @@ namespace VRQuestionnaireToolkit
             sliderRec.SetParent(_questionRecTest);
             sliderRec.localPosition = new Vector3(0, 90 - (numQuestions * 100), 0);
             sliderRec.localRotation = Quaternion.identity;
-            sliderRec.localScale = new Vector3(sliderRec.localScale.x * 0.01f, sliderRec.localScale.y * 0.01f, sliderRec.localScale.z * 0.01f);
-
+            // sliderRec.localScale = new Vector3(sliderRec.localScale.x * 0.01f, sliderRec.localScale.y * 0.01f, sliderRec.localScale.z * 0.01f);
+            sliderRec.localScale = Vector3.one;
             SliderList.Add(temp);
         }
 

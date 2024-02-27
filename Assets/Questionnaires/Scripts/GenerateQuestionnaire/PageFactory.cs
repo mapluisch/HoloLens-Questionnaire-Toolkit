@@ -303,8 +303,8 @@ namespace VRQuestionnaireToolkit
         {
             rec.localPosition = new Vector3(0, 0, 0);
             rec.localRotation = Quaternion.identity;
-            rec.localScale = new Vector3(rec.localScale.x * 0.01f, rec.localScale.y * 0.01f, rec.localScale.z * 0.01f);
-            // rec.localScale = new Vector3(1, 1, 1);
+            // rec.localScale = new Vector3(rec.localScale.x * 0.01f, rec.localScale.y * 0.01f, rec.localScale.z * 0.01f);
+            rec.localScale = Vector3.one;
         }
 
 

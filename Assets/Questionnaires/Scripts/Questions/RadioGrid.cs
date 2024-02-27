@@ -85,8 +85,9 @@ namespace VRQuestionnaireToolkit
 
             radioGridRec.localPosition = new Vector3(-100 + (numOptions * 70), 35 - (numConditions * 50), 0);
             radioGridRec.localRotation = Quaternion.identity;
-            radioGridRec.localScale = new Vector3(radioGridRec.localScale.x * 0.01f, radioGridRec.localScale.y * 0.01f, radioGridRec.localScale.z * 0.01f);
-
+            // radioGridRec.localScale = new Vector3(radioGridRec.localScale.x * 0.01f, radioGridRec.localScale.y * 0.01f, radioGridRec.localScale.z * 0.01f);
+            radioGridRec.localScale = Vector3.one;
+                
             // Set radiobutton group
             RadioGrid radioGridScript = temp.GetComponentInParent<RadioGrid>();
             temp.GetComponentInChildren<Toggle>().group = radioGridScript.gameObject.GetComponent<ToggleGroup>();
