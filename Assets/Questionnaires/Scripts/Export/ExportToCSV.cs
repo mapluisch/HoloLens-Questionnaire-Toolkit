@@ -390,7 +390,7 @@ namespace VRQuestionnaireToolkit
             {
                 yield return www.SendWebRequest();
 
-                if (www.isHttpError || www.isNetworkError)
+                if (www.result is UnityWebRequest.Result.ProtocolError or UnityWebRequest.Result.ConnectionError)
                 {
                     Debug.LogError(www.error + "\nPlease check the validity of the server URI.");
                 }
@@ -412,7 +412,7 @@ namespace VRQuestionnaireToolkit
             UnityWebRequest www = new UnityWebRequest(uri);
             yield return www.SendWebRequest();
 
-            if (www.isHttpError || www.isNetworkError)
+            if (www.result is UnityWebRequest.Result.ProtocolError or UnityWebRequest.Result.ConnectionError)
             {
                 Debug.LogError(www.error + "\nPlease check the validity of the server URI.");
             }
