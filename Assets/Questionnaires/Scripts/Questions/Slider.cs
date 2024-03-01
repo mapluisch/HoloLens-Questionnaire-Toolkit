@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Microsoft.MixedReality.Toolkit.UI;
 using SimpleJSON;
 using TMPro;
 using UnityEngine;
@@ -85,7 +86,7 @@ namespace VRQuestionnaireToolkit
                 _qMinLabel;
             temp.GetComponentInChildren<UnityEngine.UI.Slider>().GetComponentsInChildren<TextMeshProUGUI>()[1].text =
                 _qMaxLabel;
-
+            
             //Set Slider start value
             temp.GetComponentInChildren<UnityEngine.UI.Slider>().value = QMax % 2 == 0 ? (int)QMax / 2 : 0;
 
