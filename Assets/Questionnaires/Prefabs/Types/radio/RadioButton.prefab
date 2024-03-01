@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8709281401932999767}
   - component: {fileID: 2279222009143128302}
   - component: {fileID: 2352704933608037954}
+  - component: {fileID: 3492924670952498163}
   m_Layer: 0
   m_Name: Radio
   m_TagString: Untagged
@@ -61,7 +62,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.06, y: 0.06, z: 0.025}
+  m_Size: {x: 0.05, y: 0.05, z: 0.025}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4366243002681149943
 MonoBehaviour:
@@ -220,8 +221,8 @@ MonoBehaviour:
   debounceThreshold: 0.01
   localForward: {x: 0, y: 0, z: -1}
   localUp: {x: 0, y: 1, z: 0}
-  localCenter: {x: 0.08, y: 0, z: -0.0125}
-  bounds: {x: 0.22, y: 0.05}
+  localCenter: {x: 0, y: 0, z: -0.0125}
+  bounds: {x: 0.05, y: 0.05}
   touchableCollider: {fileID: 3030410557185116023}
 --- !u!114 &8709281401932999767
 MonoBehaviour:
@@ -366,6 +367,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 0
+--- !u!114 &3492924670952498163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251085807550043306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b54db0a4f5cb94fb1e9768acc5f42b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3061007160899691119
 GameObject:
   m_ObjectHideFlags: 0

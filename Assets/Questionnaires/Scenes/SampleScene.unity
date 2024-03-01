@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 966158033}
   - component: {fileID: 966158032}
   m_Layer: 0
-  m_Name: AR Questionnaire Container
+  m_Name: Questionnaire Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -640,7 +640,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8697000387260259617, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
       propertyPath: m_Name
-      value: VRQuestionnaireToolkit
+      value: HoloLensQuestionnaireToolkit
       objectReference: {fileID: 0}
     - target: {fileID: 8697000387260259619, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
       propertyPath: m_Pivot.x

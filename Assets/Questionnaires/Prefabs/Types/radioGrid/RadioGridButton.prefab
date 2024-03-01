@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 7705780405879273666}
   - component: {fileID: 622285535965968659}
   - component: {fileID: 718060899933500929}
+  - component: {fileID: 4723226683004240648}
   m_Layer: 0
   m_Name: Radio
   m_TagString: Untagged
@@ -500,6 +501,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 0
+--- !u!114 &4723226683004240648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103813125828553238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b54db0a4f5cb94fb1e9768acc5f42b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &923092070891722187
 GameObject:
   m_ObjectHideFlags: 0
