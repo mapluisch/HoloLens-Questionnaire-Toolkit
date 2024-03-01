@@ -171,7 +171,7 @@ namespace VRQuestionnaireToolkit
                 if (_pageFactory.PageList.Count - 2 == _pageFactory.CurrentPage)
                 {
                     GameObject q_footer = GameObject.Find("Q_Footer");
-                    TextMeshProUGUI nextButton = q_footer.GetComponentInChildren<TextMeshProUGUI>();
+                    TextMeshPro nextButton = q_footer.GetComponentInChildren<TextMeshPro>();
                     nextButton.text = "Submit";
                 }
 
