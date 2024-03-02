@@ -16,14 +16,20 @@ public class SliderSyncer : MonoBehaviour
     {
         uiSlider = GetComponent<Slider>();
         mrtkSlider = GetComponent<PinchSlider>();
-
-        if (uiSlider && mrtkSlider) mrtkSlider.OnValueUpdated.AddListener(MapSliderValues);
+        
+        if (uiSlider && mrtkSlider) mrtkSlider.OnInteractionEnded.AddListener(MapSliderValues);
     }
     
     private void OnDisable()
     {
-        if (mrtkSlider) mrtkSlider.OnValueUpdated.RemoveListener(MapSliderValues);
+        if (mrtkSlider) mrtkSlider.OnInteractionEnded.RemoveListener(MapSliderValues);
     }
 
-    void MapSliderValues(SliderEventData eventData) => uiSlider.value = uiSlider.minValue + eventData.NewValue * (uiSlider.maxValue - uiSlider.minValue);
+    void MapSliderValues(SliderEventData eventData)
+    {
+        // first, map uiSlider val to relative mrtk slider val (clamped between 0-1, you sadly can't set fixed min-max-vals)
+        uiSlider.value = Mathf.Lerp(uiSlider.minValue, uiSlider.maxValue, mrtkSlider.SliderValue);
+        // then, normalize uiSlider.value and map it to the mrtk SliderValue for snapping into position
+        mrtkSlider.SliderValue = (uiSlider.value - uiSlider.minValue) / (uiSlider.maxValue - uiSlider.minValue);
+    } 
 }
