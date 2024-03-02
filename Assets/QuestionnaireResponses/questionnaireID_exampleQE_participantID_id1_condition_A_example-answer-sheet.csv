@@ -25,7 +25,7 @@ linearSlider;Mental Demand:				How mentally demanding was the task?;s3;10
 linearGrid;Mental Demand:				How mentally demanding was the task?;s4;
 linearGrid;Physical Demand:				How physically demanding was the task?;s5;
 linearGrid;Temporal Demand:		    How hurried or rushed was the pace of the task?;s6;
-dropdown;Demanding;d1;2
+dropdown;Demanding;d1;0
 dropdown;Mental;d2;0
 dropdown;Physical;d3;0
 

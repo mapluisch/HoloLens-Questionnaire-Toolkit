@@ -139,7 +139,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3655683786543787358}
   - component: {fileID: 1724787637497679805}
-  - component: {fileID: 2311882233119772645}
   - component: {fileID: 704972440177333008}
   m_Layer: 0
   m_Name: TextMeshPro
@@ -209,14 +208,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!222 &2311882233119772645
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126756983285679801}
-  m_CullTransparentMesh: 0
 --- !u!114 &704972440177333008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,7 +408,6 @@ GameObject:
   - component: {fileID: 2819170186761046734}
   - component: {fileID: 107349541216597267}
   - component: {fileID: 2153825453478842462}
-  - component: {fileID: 5536232911346253476}
   - component: {fileID: 2925477723677186256}
   m_Layer: 0
   m_Name: UIButtonCharIcon
@@ -495,14 +485,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352494113584837521}
   m_Mesh: {fileID: 0}
---- !u!222 &5536232911346253476
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 352494113584837521}
-  m_CullTransparentMesh: 0
 --- !u!114 &2925477723677186256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1466,7 +1448,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4865507728756829895}
   - component: {fileID: 4708209064771881962}
-  - component: {fileID: 8026755851591747862}
   - component: {fileID: 1590748458842255288}
   m_Layer: 0
   m_Name: TextMeshPro
@@ -1536,14 +1517,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!222 &8026755851591747862
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1841158237667790222}
-  m_CullTransparentMesh: 0
 --- !u!114 &1590748458842255288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1679,7 +1652,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6817368741223887335}
   - component: {fileID: 856130099143029358}
-  - component: {fileID: 3969150768745939412}
   - component: {fileID: 4096740988380527246}
   m_Layer: 0
   m_Name: TextMeshPro
@@ -1749,14 +1721,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!222 &3969150768745939412
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2198825725873702012}
-  m_CullTransparentMesh: 0
 --- !u!114 &4096740988380527246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2780,7 +2744,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3404784598269229434}
   - component: {fileID: 7659445947858946932}
-  - component: {fileID: 4346770676013903679}
   - component: {fileID: 8905763261529341741}
   m_Layer: 0
   m_Name: TextMeshPro
@@ -2850,14 +2813,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!222 &4346770676013903679
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5527117387169979579}
-  m_CullTransparentMesh: 0
 --- !u!114 &8905763261529341741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4088,7 +4043,6 @@ GameObject:
   - component: {fileID: 819904561178753447}
   - component: {fileID: 8326434319669181663}
   - component: {fileID: 8177102642708278542}
-  - component: {fileID: 2225420871449471290}
   - component: {fileID: 4655856344744433965}
   m_Layer: 0
   m_Name: UIButtonCharIcon
@@ -4166,14 +4120,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8198408241013057157}
   m_Mesh: {fileID: 0}
---- !u!222 &2225420871449471290
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8198408241013057157}
-  m_CullTransparentMesh: 0
 --- !u!114 &4655856344744433965
 MonoBehaviour:
   m_ObjectHideFlags: 0
