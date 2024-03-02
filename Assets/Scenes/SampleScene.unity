@@ -236,7 +236,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -661,10 +661,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HoloLensQuestionnaireToolkit
       objectReference: {fileID: 0}
-    - target: {fileID: 8697000387260259618, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
-      propertyPath: m_DynamicPixelsPerUnit
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 8697000387260259619, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -696,18 +692,6 @@ PrefabInstance:
     - target: {fileID: 8697000387260259619, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
       propertyPath: m_SizeDelta.y
       value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8697000387260259619, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8697000387260259619, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8697000387260259619, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8697000387260259619, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
       propertyPath: m_LocalPosition.x
@@ -756,14 +740,6 @@ PrefabInstance:
     - target: {fileID: 8697000387260259619, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8697000387260259619, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8697000387260259646, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
