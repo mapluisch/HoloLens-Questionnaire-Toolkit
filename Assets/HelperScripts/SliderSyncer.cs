@@ -3,10 +3,12 @@ using Microsoft.MixedReality.Toolkit.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
-/// <summary>
-/// added by Martin Pluisch, 01. March 2024
-/// maps the slider values of MRKT's slider to the UI Slider within the range of min and max val.
-/// </summary>
+/*
+ * Author: Martin Pluisch
+ * Date: 1st of March, 2024
+ * Description: Maps & refreshes the slider values of MRKT's slider to the UI Slider within the range of min and max val.
+ * License: MIT License
+ */
 public class SliderSyncer : MonoBehaviour
 {
     private Slider uiSlider;

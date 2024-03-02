@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using SimpleJSON;
@@ -43,6 +44,12 @@ namespace VRQuestionnaireToolkit
         private int numberQuestionnaires;
         private string qId;
         private string pId;
+        
+        // --- Martin Pluisch:
+        // added an event Action which triggers on finished generation
+        // I specifically use it to trigger a potential theme switch
+        public static event Action OnQuestionnaireGenerated;
+        // ---
 
         private void FireEvent()
         {
@@ -133,6 +140,8 @@ namespace VRQuestionnaireToolkit
             numberQuestionnaires++;
 
             ReadJson(inputPath);
+            
+            OnQuestionnaireGenerated?.Invoke();
         }
 
         void ReadJson(string jsonPath)

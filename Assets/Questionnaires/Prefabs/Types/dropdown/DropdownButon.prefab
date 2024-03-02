@@ -357,8 +357,8 @@ MonoBehaviour:
   profiles:
   - Target: {fileID: 4617381914042565400}
     Themes:
-    - {fileID: 11400000, guid: 61962e4d95d843842bb2dee96b41da6c, type: 2}
-    - {fileID: 11400000, guid: 61962e4d95d843842bb2dee96b41da6c, type: 2}
+    - {fileID: 11400000, guid: 50ff5251d3b186147b223103928ccf63, type: 2}
+    - {fileID: 11400000, guid: f5e8564d19a4f754db4860d0d136db11, type: 2}
   OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -1017,8 +1017,8 @@ MonoBehaviour:
   profiles:
   - Target: {fileID: 4782939584213830668}
     Themes:
-    - {fileID: 11400000, guid: 61962e4d95d843842bb2dee96b41da6c, type: 2}
-    - {fileID: 11400000, guid: 61962e4d95d843842bb2dee96b41da6c, type: 2}
+    - {fileID: 11400000, guid: 50ff5251d3b186147b223103928ccf63, type: 2}
+    - {fileID: 11400000, guid: f5e8564d19a4f754db4860d0d136db11, type: 2}
   OnClick:
     m_PersistentCalls:
       m_Calls: []

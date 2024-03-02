@@ -5,6 +5,12 @@ using Microsoft.MixedReality.Toolkit.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * Author: Martin Pluisch
+ * Date: 1st of March, 2024
+ * Description: Synchronizes the state of a UI toggle and MRTK's interactable counterpart.
+ * License: MIT License
+ */
 public class ToggleSyncer : MonoBehaviour
 {
     private Toggle uiToggle;
