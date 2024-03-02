@@ -355,8 +355,8 @@ MonoBehaviour:
   debounceThreshold: 0.01
   localForward: {x: 0, y: 0, z: -1}
   localUp: {x: 0, y: 1, z: 0}
-  localCenter: {x: 0.08, y: 0, z: -0.0125}
-  bounds: {x: 0.22, y: 0.05}
+  localCenter: {x: 0, y: 0, z: -0.0125}
+  bounds: {x: 0.06, y: 0.06}
   touchableCollider: {fileID: 3057661102324955603}
 --- !u!114 &7705780405879273666
 MonoBehaviour:
@@ -542,7 +542,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.00000006657903, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2685547, y: 0.2685547, z: 0.24414062}
+  m_LocalScale: {x: 0.3540039, y: 0.3540039, z: 0.30517578}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2840069671815339139}
@@ -611,7 +611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BasePixelScale: 2048
   AnchorTransform: {fileID: 499788345250409431}
-  Scale: {x: 1, y: 1, z: 1}
+  Scale: {x: 1.25, y: 1.25, z: 1.25}
   Offset: {x: -150, y: -150, z: 0}
   OnlyInEditMode: 1
 --- !u!1 &2158643644149218745

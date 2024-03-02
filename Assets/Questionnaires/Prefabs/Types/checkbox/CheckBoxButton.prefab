@@ -665,7 +665,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.034179688, y: 0.034179688, z: 0.0073242188}
+  m_LocalScale: {x: 0.045166016, y: 0.045166016, z: 0.009155273}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1726296565661767190}
@@ -755,7 +755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BasePixelScale: 2048
   AnchorTransform: {fileID: 1592237549163309294}
-  Scale: {x: 1, y: 1, z: 1}
+  Scale: {x: 1.25, y: 1.25, z: 1.25}
   Offset: {x: -20, y: -20, z: 0}
   OnlyInEditMode: 1
 --- !u!1 &7262677930300331667
