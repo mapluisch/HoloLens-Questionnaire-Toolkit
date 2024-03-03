@@ -21,7 +21,7 @@ checkbox; If you don’t use VR frequently, what is keeping you from adopting th
 checkbox; If you don’t use VR frequently, what is keeping you from adopting this? -The experience isn't better than traditional gaming;q9;
 linearSlider;Temporal Demand:			How hurried or rushed was the pace of the task?;s1;0
 linearSlider;Physical Demand:				How physically demanding was the task?;s2;6
-linearSlider;Mental Demand:				How mentally demanding was the task?;s3;16
+linearSlider;Mental Demand:				How mentally demanding was the task?;s3;10
 linearGrid;Mental Demand:				How mentally demanding was the task?;s4;
 linearGrid;Physical Demand:				How physically demanding was the task?;s5;
 linearGrid;Temporal Demand:		    How hurried or rushed was the pace of the task?;s6;

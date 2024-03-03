@@ -55,6 +55,11 @@ namespace VRQuestionnaireToolkit
 
         public UnityEvent QuestionnaireFinishedEvent;
 
+        // --- Martin Pluisch:
+        // added two new events:
+        public static event Action OnQuestionnaireDataSaved; // invoked when questionnaire answers have been saved locally
+        public static event Action OnQuestionnaireDataSentToServer; // invoked when answers have been successfully sent to the server
+        
         // Use this for initialization
         void Start()
         {
@@ -366,6 +371,8 @@ namespace VRQuestionnaireToolkit
                 StreamWriter outStream = System.IO.File.CreateText(localPath);
                 outStream.WriteLine(content);
                 outStream.Close();
+                
+                OnQuestionnaireDataSaved?.Invoke();
             }
             catch (IOException ex)
             {
@@ -398,6 +405,7 @@ namespace VRQuestionnaireToolkit
                 {
                     string responseText = www.downloadHandler.text;
                     Debug.Log("Message from the server: " + responseText);
+                    OnQuestionnaireDataSentToServer?.Invoke();
                 }
             }
         }
