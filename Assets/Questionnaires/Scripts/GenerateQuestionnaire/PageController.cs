@@ -160,9 +160,7 @@ namespace VRQuestionnaireToolkit
          */
         public void GoToNextPage()
         {
-            // Martin Pluisch -- temporary override for easier debugging
-            if (true)
-            //if (CheckMandatoryQuestionsAnswered() || _pageFactory.CurrentPage == 0)
+            if (CheckMandatoryQuestionsAnswered() || _pageFactory.CurrentPage == 0)
             {
                 // _pageFactory.GetComponentInChildren<TextMeshProUGUI>().gameObject.SetActive(false);
                 _pageFactory.PageList[_pageFactory.CurrentPage].SetActive(false);
