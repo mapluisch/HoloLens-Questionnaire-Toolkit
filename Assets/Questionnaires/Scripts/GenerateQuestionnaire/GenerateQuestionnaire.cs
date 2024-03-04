@@ -146,8 +146,16 @@ namespace VRQuestionnaireToolkit
 
         void ReadJson(string jsonPath)
         {
+            string JSONString = "";
+            // Martin Pluisch -- additional logic needed for builds running on HoloLens
+            #if WINDOWS_UWP
+            TextAsset jsonAsset = Resources.Load<TextAsset>(jsonPath.StartsWith("Assets/") ? jsonPath.Substring(7) : jsonPath);
+            if (jsonAsset != null) JSONString = jsonAsset.text;
+            #else
             // reads and parses .json input file
-            string JSONString = File.ReadAllText(jsonPath);
+            JSONString = File.ReadAllText(jsonPath);
+            #endif
+            
             var N = JSON.Parse(JSONString);
 
             //----------- Read metadata from .JSON file ----------//

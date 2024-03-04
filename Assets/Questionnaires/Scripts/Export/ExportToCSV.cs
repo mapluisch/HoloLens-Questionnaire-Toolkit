@@ -5,12 +5,16 @@ using System.Text;
 using System.IO;
 using System;
 using TMPro;
-using UnityEditor.Build.Content;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.WSA;
 using Application = UnityEngine.Application;
 using UnityEngine.Networking;
+
+#if WINDOWS_UWP
+using Windows.Storage;
+using System.Threading.Tasks;
+#endif
 
 /// <summary>
 /// ExportToCSV.class
@@ -83,21 +87,31 @@ namespace VRQuestionnaireToolkit
             }
             else
             {
-                if (SaveToLocal)
+                // Martin Pluisch -- additional logic needed for builds running on HoloLens
+                #if WINDOWS_UWP  // check if running on HoloLens or another UWP platform
+                try
                 {
-                    try // create a new folder if the specified folder does not exist.
+                    Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+                    storageFolder.CreateFolderAsync(_folderPath, Windows.Storage.CreationCollisionOption.OpenIfExists);
+                }
+                catch (Exception ex)
+                {
+                    Debug.Log($"UWP storage exception: {ex.Message}");
+                }
+                #else // non-UWP (including non-HoloLens) environments
+                try
+                {
+                    if (!Directory.Exists(_folderPath))
                     {
-                        if (!Directory.Exists(_folderPath))
-                        {
-                            Directory.CreateDirectory(_folderPath);
-                            Debug.LogWarning("Local folder path does not exist! New folder created at " + _folderPath);
-                        }
-                    }
-                    catch (IOException ex)
-                    {
-                        Debug.Log(ex.Message);
+                        Directory.CreateDirectory(_folderPath);
+                        Debug.LogWarning("Local folder path does not exist! New folder created at " + _folderPath);
                     }
                 }
+                catch (IOException ex)
+                {
+                    Debug.Log(ex.Message);
+                }
+                #endif
 
                 if (SaveToServer)
                 {
@@ -366,6 +380,10 @@ namespace VRQuestionnaireToolkit
         void WriteToLocal(string localPath, StringBuilder content)
         {
             print("Answers stored in path: " + localPath);
+            
+            #if WINDOWS_UWP
+            StartCoroutine(WriteToLocalUWPCoroutine(localPath, content.ToString()));
+            #else
             try
             {
                 StreamWriter outStream = System.IO.File.CreateText(localPath);
@@ -378,7 +396,44 @@ namespace VRQuestionnaireToolkit
             {
                 Debug.Log(ex.Message);
             }
+            #endif
         }
+        
+        // Martin Pluisch -- added HoloLens / UWP specific file writer
+        #if WINDOWS_UWP
+        private IEnumerator WriteToLocalUWPCoroutine(string localPath, string content)
+        {
+            Task writeTask = WriteToLocalUWP(localPath, content);
+            while (!writeTask.IsCompleted)
+            {
+                yield return null;
+            }
+
+            if (writeTask.IsFaulted)
+            {
+                Debug.Log(writeTask.Exception.ToString());
+            }
+            else
+            {
+                OnQuestionnaireDataSaved?.Invoke();
+            }
+        }
+
+        private async Task WriteToLocalUWP(string localPath, string content)
+        {
+            try
+            {
+                string filename = Path.GetFileName(localPath);
+                StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+                StorageFile output = await localFolder.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
+                await FileIO.WriteTextAsync(output, content);
+            }
+            catch (Exception ex)
+            {
+                Debug.Log(ex.Message);
+            }
+        }
+        #endif
 
         /// <summary>
         /// Post data to a specific server location.

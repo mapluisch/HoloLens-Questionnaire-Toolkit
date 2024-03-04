@@ -160,7 +160,8 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.martinpluisch.HoloLens-Questionnaire-Toolkit
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -647,7 +648,7 @@ PlayerSettings:
   scriptingDefineSymbols:
     Android: USE_INPUT_SYSTEM_POSE_CONTROL;USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS
     Standalone: USE_INPUT_SYSTEM_POSE_CONTROL;USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS
-    Windows Store Apps: USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS;DOTNETWINRT_PRESENT
+    Windows Store Apps: master;USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS;DOTNETWINRT_PRESENT
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
@@ -679,14 +680,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: ARQuestionnaireToolkit
-  metroPackageVersion: 1.0.0.0
-  metroCertificatePath: 
+  metroPackageName: HoloLensQuestionnaireToolkit
+  metroPackageVersion: 1.0.17.0
+  metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: AR Questionnaire Toolkit
+  metroCertificateSubject: martinpluisch
+  metroCertificateIssuer: martinpluisch
+  metroCertificateNotAfter: 0077f9157e8cdb01
+  metroApplicationDescription: HoloLens Questionnaire Toolkit
   wsaImages: {}
   metroTileShortName: AR Questionnaire Toolkit
   metroTileShowName: 0
@@ -702,6 +703,8 @@ PlayerSettings:
   metroSplashScreenUseBackgroundColor: 0
   platformCapabilities:
     WindowsStoreApps:
+      PrivateNetworkClientServer: True
+      InternetClientServer: True
       SpatialPerception: True
       InternetClient: True
       WebCam: True
