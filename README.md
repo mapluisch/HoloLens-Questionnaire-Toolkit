@@ -1,7 +1,7 @@
 <h1 align="center">HoloLens Questionnaire Toolkit</h1>
 
 <div align="center">
-  <img src="" alt="banner" style="width:50%">
+  <img src="https://github.com/mapluisch/HoloLens-Questionnaire-Toolkit/assets/31780571/f34f26b9-77d4-4a6a-8cbf-e0d375d21d2c" alt="banner" style="width:75%">
   <p>Questionnaire Toolkit optimized for HoloLens using standard MRTK components. Easily administer questionnaires in HoloLens-related studies.</p>
 </div>
 <hr>
