@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.MixedReality.Toolkit.UI;
 using UnityEngine;
 using SimpleJSON;
 using TMPro;
@@ -98,7 +99,7 @@ namespace VRQuestionnaireToolkit
             PageList[CurrentPage].SetActive(true);
 
             GameObject q_footer = GameObject.Find("Q_Footer");
-            Button[] nextButton = q_footer.GetComponentsInChildren<Button>();
+            PressableButtonHoloLens2[] nextButton = q_footer.GetComponentsInChildren<PressableButtonHoloLens2>();
             if (nextButton.Length > 0) nextButton[1].gameObject.SetActive(false);
         }
 
