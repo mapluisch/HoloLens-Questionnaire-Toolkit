@@ -211,7 +211,7 @@ namespace VRQuestionnaireToolkit
             {
                 timer += increment;
                 textObj.GetComponent<TextMeshProUGUI>().color = 
-                    Color.Lerp(Color.black, Color.red, Mathf.Abs(Mathf.Sin(3*Mathf.PI*timer))); // blink 3 times from black to red.
+                    Color.Lerp(ThemeSwitcher.TextColor, Color.red, Mathf.Abs(Mathf.Sin(3*Mathf.PI*timer))); // blink 3 times from black to red.
                 yield return new WaitForSeconds(increment);
             }
         }

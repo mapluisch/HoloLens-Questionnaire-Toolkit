@@ -29,6 +29,8 @@ public class ThemeSwitcher : MonoBehaviour
     [SerializeField] private ColorTheme baseTheme, mrtkTheme;
     [SerializeField] private Material buttonMaterial;
     private List<GameObject> panels = new List<GameObject>();
+    // used for color lerping in PageController when mandatory questions have not been answered (replaces hard-coded Color.black in the original script)
+    public static Color TextColor; 
 
     private void OnEnable() => GenerateQuestionnaire.OnQuestionnaireGenerated += RefreshTheme;
     private void OnDisable() => GenerateQuestionnaire.OnQuestionnaireGenerated -= RefreshTheme;
@@ -55,6 +57,9 @@ public class ThemeSwitcher : MonoBehaviour
             panel.GetComponentsInChildren<TextMeshProUGUI>(true).ToList().ForEach(t => t.color = theme.text);
             panel.GetComponentsInChildren<TextMeshPro>(true).ToList().ForEach(t => t.color = theme.text);
             
+            // set global text color var
+            TextColor = theme.text;
+
             buttonMaterial.color = theme.main;
         }
     }
